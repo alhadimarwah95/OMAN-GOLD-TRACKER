@@ -4,7 +4,7 @@ import { Header } from './components/header/header';
 import { Hero } from './components/hero/hero';
 import { PriceCard } from './components/price-card/price-card';
 import { GoldCalculator } from './components/gold-calculator/gold-calculator';
-import { PriceTrend } from './components/price-trend/price-trend';
+import { PriceTrendComponent } from './components/price-trend/price-trend';
 import { PriceHistory } from './components/price-history/price-history';
 import { Footer } from './components/footer/footer';
 
@@ -19,7 +19,7 @@ import { LanguageService } from './services/language';
     Hero,
     PriceCard,
     GoldCalculator,
-    PriceTrend,
+    PriceTrendComponent,
     PriceHistory,
     Footer
   ],

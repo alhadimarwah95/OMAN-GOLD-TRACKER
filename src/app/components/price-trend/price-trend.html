@@ -1,6 +1,13 @@
-<div class="mb-8 flex flex-wrap gap-3">
-  <button (click)="selectKarat('18K')" [class.bg-amber-900]="selectedKarat === '18K'" [class.text-white]="selectedKarat === '18K'" class="rounded-xl border border-amber-300 px-5 py-2 font-semibold">18K</button>
-  <button (click)="selectKarat('21K')" [class.bg-amber-900]="selectedKarat === '21K'" [class.text-white]="selectedKarat === '21K'" class="rounded-xl border border-amber-300 px-5 py-2 font-semibold">21K</button>
-  <button (click)="selectKarat('22K')" [class.bg-amber-900]="selectedKarat === '22K'" [class.text-white]="selectedKarat === '22K'" class="rounded-xl border border-amber-300 px-5 py-2 font-semibold">22K</button>
-  <button (click)="selectKarat('24K')" [class.bg-amber-900]="selectedKarat === '24K'" [class.text-white]="selectedKarat === '24K'" class="rounded-xl border border-amber-300 px-5 py-2 font-semibold">24K</button>
+<div class="bg-white rounded-xl p-4 shadow">
+  <h3 class="font-bold mb-3 text-lg">Gold Price Trend</h3>
+  
+  <div class="mb-4 flex flex-wrap gap-2">
+    <button (click)="selectedKarat='18K'; updateChart()" [class.bg-amber-900]="selectedKarat==='18K'" class="px-3 py-1 border rounded-full text-sm">18K</button>
+    <button (click)="selectedKarat='21K'; updateChart()" [class.bg-amber-900]="selectedKarat==='21K'" class="px-3 py-1 border rounded-full text-sm">21K</button>
+    <button (click)="selectedKarat='22K'; updateChart()" [class.bg-amber-900]="selectedKarat==='22K'" class="px-3 py-1 border rounded-full text-sm">22K</button>
+    <button (click)="selectedKarat='24K'; updateChart()" [class.bg-amber-900]="selectedKarat==='24K'" class="px-3 py-1 border rounded-full text-sm">24K</button>
+  </div>
+
+  <canvas id="goldChart"></canvas>
 </div>
+
