@@ -8,7 +8,9 @@ import { PriceTrendComponent } from './components/price-trend/price-trend';
 import { PriceHistory } from './components/price-history/price-history';
 import { Footer } from './components/footer/footer';
 
-import { GOLD_PRICES } from './data/gold-data';
+import { GoldService } from './services/gold.service';
+import { GoldPrice } from './models/gold.model';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LanguageService } from './services/language';
 
 @Component({
@@ -21,7 +23,8 @@ import { LanguageService } from './services/language';
     GoldCalculator,
     PriceTrendComponent,
     PriceHistory,
-    Footer
+    Footer,
+    HttpClientModule,
   ],
 
   templateUrl: './app.html',
@@ -29,7 +32,9 @@ import { LanguageService } from './services/language';
 })
 
 export class App {
-  goldPrices = GOLD_PRICES;
+  goldPrices: GoldPrice[] = []
+constructor(public language: LanguageService, private goldService: GoldService) {
+this.goldService.getPrices().subscribe(data => this.goldPrices = data);
+}
 
-  constructor(public language: LanguageService) {}
 }

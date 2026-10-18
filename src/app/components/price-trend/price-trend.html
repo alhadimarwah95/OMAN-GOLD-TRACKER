@@ -1,6 +1,5 @@
 <div class="bg-white rounded-xl p-4 shadow">
-  <h3 class="font-bold mb-3 text-lg">Gold Price Trend</h3>
-  
+  <h3 class="font-bold mb-3 text-lg">Gold Price Trend</h3>  
   <div class="mb-4 flex flex-wrap gap-2">
     <button (click)="selectedKarat='18K'; updateChart()" [class.bg-amber-900]="selectedKarat==='18K'" class="px-3 py-1 border rounded-full text-sm">18K</button>
     <button (click)="selectedKarat='21K'; updateChart()" [class.bg-amber-900]="selectedKarat==='21K'" class="px-3 py-1 border rounded-full text-sm">21K</button>
@@ -9,5 +8,6 @@
   </div>
 
   <canvas id="goldChart"></canvas>
+
 </div>
 
